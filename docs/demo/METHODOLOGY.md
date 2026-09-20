@@ -1,6 +1,6 @@
 # Spotify demo methodology
 
-Recorded on Windows on 20 September 2026. [Watch the demo](jetdesk-vs-codex.mp4).
+Recorded on Windows on 20 September 2026. [View the animated preview](preview.gif) or [download the MP4](https://github.com/chand45/JetDesk/raw/refs/heads/master/docs/demo/jetdesk-vs-codex.mp4).
 
 Both workflows received the request:
 
@@ -29,6 +29,8 @@ JetDesk dispatched three successful inputs and rejected one further attempt beca
 The requested current song and artist, global Pause control, and subsequently advancing playback position were independently observed for both runs. Follow-up progress checks occurred after the primary timed endpoints. The muted video establishes visible playback, not recorded speaker output.
 
 The 59.67-second MP4 is 1920 × 1080 at 30 fps. The two recorded start boundaries are aligned, and the measured workflows play at real speed with no waits removed. Each timer stops at its measured endpoint; its footage continues for three seconds to show playback progression, then freezes. Titles and result cards are outside the timed comparison. Raw capture timestamps preserve elapsed time despite dropped capture frames; displayed times are rounded to tenths.
+
+The README includes the full video as a 960 × 540 animated GIF at 10 fps because GitHub's repository file page does not preview this MP4. The GIF preserves the same real-time sequence; the linked MP4 provides the full-quality version.
 
 ## Interpretation limits
 

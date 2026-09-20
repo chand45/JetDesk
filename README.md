@@ -4,9 +4,9 @@ JetDesk is a native Windows application for fast computer use, powered by Jev. I
 
 ## Demo
 
-[![Watch JetDesk and Codex play Sweater Weather on Spotify](docs/demo/poster.png)](docs/demo/jetdesk-vs-codex.mp4)
+[![Real-time demo: JetDesk and Codex play Sweater Weather on Spotify](docs/demo/preview.gif)](https://github.com/chand45/JetDesk/raw/refs/heads/master/docs/demo/jetdesk-vs-codex.mp4)
 
-**[Watch the 60-second demo](docs/demo/jetdesk-vs-codex.mp4)** — JetDesk completed this recorded task in **17.4 seconds**; Codex Computer Use took **42.7 seconds**, or **2.45× as long**. The video shows both runs side by side at real speed.
+**[Download the full-quality 60-second MP4](https://github.com/chand45/JetDesk/raw/refs/heads/master/docs/demo/jetdesk-vs-codex.mp4)** — JetDesk completed this recorded task in **17.4 seconds**; Codex Computer Use took **42.7 seconds**, or **2.45× as long**. The animated preview above shows the complete, silent comparison side by side at real speed.
 
 One warmed run per workflow: JetDesk used **Jev 1.13.0**; Codex used **gpt-6-astra with ultra reasoning**. Both reached verified visible playback. JetDesk played the music video; Codex played the audio track. Setup, request entry, and the JetDesk GUI countdown are excluded. See the [methodology and limitations](docs/demo/METHODOLOGY.md).
 
