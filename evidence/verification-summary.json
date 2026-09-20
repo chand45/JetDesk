@@ -1,0 +1,555 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-09-20T07:51:53.7057441+00:00",
+  "privacy": "Allowlisted summary only. Full screen dumps, window/app inventories, URLs, account identifiers, local user paths, and credentials are omitted.",
+  "publishedArtifact": {
+    "executable": "app/JevDesktop.exe",
+    "executableSha256": "699EA792E84A226FBE083131187EA231F74441E5A87117A22EE7B532DBD7BB3D",
+    "assemblySha256": "19867A1760F7771902CF268E7C7EABC0E458B4A55CE4A00171507CABA50D3FFF",
+    "runtimeTarget": ".NET 8 Desktop, Windows"
+  },
+  "clientTests": {
+    "deterministicPassedAssertions": 96,
+    "realApiPassedAssertions": 5,
+    "deterministicTransport": "Fake HTTP transport; production client and candidate-builder source.",
+    "realApiScope": "Real Jev service on synthetic text snapshots; no desktop input.",
+    "sourceLogSha256": "A09E19B7820DE90C26862A80518F251ECA568DCAD59F87B12F10DFD773D8D5FB",
+    "productionClientSha256": "185CA6343640311B4428706A4F3F9FA80D98941A830950E064FE99C026D64CBC",
+    "liveCases": [
+      {
+        "case": "not-playing",
+        "achieved": false,
+        "probability": 0.19
+      },
+      {
+        "case": "playing",
+        "achieved": true,
+        "probability": 0.94
+      },
+      {
+        "case": "paused",
+        "achieved": false,
+        "probability": 0.47
+      },
+      {
+        "case": "wrong-track",
+        "achieved": false,
+        "probability": 0.05
+      },
+      {
+        "case": "mixed-goal",
+        "achieved": false,
+        "probability": 0.07
+      }
+    ],
+    "previousRun": {
+      "deterministicPassedAssertions": 88,
+      "realApiPassedAssertions": 5,
+      "sourceLogSha256": "FB60F13A6473F38477F2246E1061EA39350C235371703CB274D07F52F191D1D8",
+      "note": "Earlier client before context-limit retry regression was added; retained separately from current results."
+    }
+  },
+  "runnerTests": {
+    "passedAssertions": 14,
+    "scenarios": 13,
+    "scope": "Production AgentRunner source with fake desktop and classifier adapters; no UI/API operations.",
+    "productionRunnerSha256": "23452649A1E11EDA2B2195F1567A8EC862C0EC04F81B6B0B2054B8ED5FD982B5",
+    "sourceLogSha256": "EBDB400C2A4480BF6CA522E291EA7DCE2DFA1F6145AD19BBD11F8C0047EC8018",
+    "results": [
+      {
+        "case": "maximum_50",
+        "sourceTraceFile": "run-20260920-131915-2eec2f.jsonl",
+        "sourceTraceSha256": "4EC0DD4E01F4A6E669D2F58F657DC8A31819E636EC52FC2027820EFB2CF55159",
+        "status": "limit_reached",
+        "countedOperations": 50,
+        "observations": 51,
+        "recordedInputAttempts": 50
+      },
+      {
+        "case": "maximum_1",
+        "sourceTraceFile": "run-20260920-131916-aeee7b.jsonl",
+        "sourceTraceSha256": "5AEB1528E5B379C92A63B9CA890B1877CC5736CF9801F0A8E6F72916B076A09C",
+        "status": "limit_reached",
+        "countedOperations": 1,
+        "observations": 2,
+        "recordedInputAttempts": 1
+      },
+      {
+        "case": "final_allowed_input_completion",
+        "sourceTraceFile": "run-20260920-131916-55f1cb.jsonl",
+        "sourceTraceSha256": "6356CAA8E00FE621F90D584F1223BEDEA95B303502290FE3E6A9147964E610C5",
+        "status": "completed",
+        "countedOperations": 1,
+        "observations": 2,
+        "recordedInputAttempts": 1
+      },
+      {
+        "case": "rejected_completion_budget",
+        "sourceTraceFile": "run-20260920-131916-8945b1.jsonl",
+        "sourceTraceSha256": "8A65E26F7D0E895776B381AFDF979391756B2ABCBDB9A916BC099A377F52932F",
+        "status": "limit_reached",
+        "countedOperations": 3,
+        "observations": 7,
+        "recordedInputAttempts": 0
+      },
+      {
+        "case": "low_confidence_budget",
+        "sourceTraceFile": "run-20260920-131916-471305.jsonl",
+        "sourceTraceSha256": "CA82337F070E4AC55864A26FEE92C5522EC610D48AA2153A445CC40965E1A331",
+        "status": "limit_reached",
+        "countedOperations": 3,
+        "observations": 4,
+        "recordedInputAttempts": 0
+      },
+      {
+        "case": "failed_input_budget",
+        "sourceTraceFile": "run-20260920-131916-9cc960.jsonl",
+        "sourceTraceSha256": "2CC9101CAAC63AB8D9B38909F45E58EC6C09C71083267DD8F22B5D8D7E776340",
+        "status": "limit_reached",
+        "countedOperations": 2,
+        "observations": 3,
+        "recordedInputAttempts": 2
+      },
+      {
+        "case": "cancel_before_start",
+        "sourceTraceFile": "run-20260920-131916-953812.jsonl",
+        "sourceTraceSha256": "6431164B73A5C693F1EBBEA5FAF71152C1D81A16727ADED079CB890F36CD0587",
+        "status": "stopped",
+        "countedOperations": 0,
+        "observations": 0,
+        "recordedInputAttempts": 0
+      },
+      {
+        "case": "cancel_during_classification",
+        "sourceTraceFile": "run-20260920-131916-d28188.jsonl",
+        "sourceTraceSha256": "F0CFE5A2A43EB1C956FF0344B8F90027E820DAFD5AD9E400E0DB560B98519B71",
+        "status": "stopped",
+        "countedOperations": 0,
+        "observations": 1,
+        "recordedInputAttempts": 0
+      },
+      {
+        "case": "cancel_during_input",
+        "sourceTraceFile": "run-20260920-131916-adb72e.jsonl",
+        "sourceTraceSha256": "614383347070D56A401ABFF4198B287758A5075F3FA2230B2522C89E6E83BFE1",
+        "status": "stopped",
+        "countedOperations": 1,
+        "observations": 1,
+        "recordedInputAttempts": 1
+      },
+      {
+        "case": "unchanged_screen_loop_with_changing_ids",
+        "sourceTraceFile": "run-20260920-131916-d2b612.jsonl",
+        "sourceTraceSha256": "6BEA04DF98CF2850E90A50A25B0CFCC3308DF822A5E9AE067610CD41FE935703",
+        "status": "needs_attention",
+        "countedOperations": 4,
+        "observations": 5,
+        "recordedInputAttempts": 4
+      },
+      {
+        "case": "fresh_success_prevents_repetition",
+        "sourceTraceFile": "run-20260920-131916-06f8ee.jsonl",
+        "sourceTraceSha256": "CBEF420F71AA392791F1003EB97A07E1A0A5B0A514EF53E94B72031C2F105D89",
+        "status": "completed",
+        "countedOperations": 1,
+        "observations": 2,
+        "recordedInputAttempts": 1
+      },
+      {
+        "case": "continue_until_fresh_success",
+        "sourceTraceFile": "run-20260920-131916-abe693.jsonl",
+        "sourceTraceSha256": "918AFAC2753C5A91CE8C42F1919ECF66928505B544D5A424A3B9CF60AE6BDB78",
+        "status": "completed",
+        "countedOperations": 2,
+        "observations": 3,
+        "recordedInputAttempts": 2
+      },
+      {
+        "case": "cancel_during_post_input_verification",
+        "sourceTraceFile": "run-20260920-131916-4adaf0.jsonl",
+        "sourceTraceSha256": "F1642F57D97DD3E1DF15F871FC1F691BF2BBB08BE9CB6DF9A8D3B52B58E4C21C",
+        "status": "stopped",
+        "countedOperations": 1,
+        "observations": 2,
+        "recordedInputAttempts": 1
+      }
+    ],
+    "previousRun": {
+      "passedAssertions": 11,
+      "scenarios": 10,
+      "note": "Earlier runner before automatic post-input verification; superseded by the 14-assertion suite."
+    }
+  },
+  "desktopRuns": [
+    {
+      "sourceResultFile": "gui-final-search-result.json",
+      "sourceTraceFile": "run-20260920-131948-089da4.jsonl",
+      "sourceTraceSha256": "D8ED6707E5E7BCC2845DEAD2F223D96DD9BC90011F535A7C6492F805B63F772D",
+      "startedAt": "2026-09-20T13:19:48.7271871+05:30",
+      "completedAt": "2026-09-20T13:20:15.3964848+05:30",
+      "status": "completed",
+      "countedOperations": 5,
+      "configuredMaximum": 50,
+      "recordedInputAttempts": 5,
+      "operationTypes": [
+        "launch_app",
+        "set_text",
+        "press_key",
+        "invoke",
+        "invoke"
+      ],
+      "observations": 6,
+      "decisions": 5,
+      "concreteModels": [
+        "jev-1.13.0"
+      ],
+      "verificationResults": [
+        {
+          "achieved": false,
+          "probability": 0.04
+        },
+        {
+          "achieved": false,
+          "probability": 0.09
+        },
+        {
+          "achieved": false,
+          "probability": 0.1
+        },
+        {
+          "achieved": false,
+          "probability": 0.09
+        },
+        {
+          "achieved": true,
+          "probability": 0.89
+        }
+      ],
+      "scope": "Final published GUI; original request with Automatic target and maximum50, starting from a different song/query and exercising actual search.",
+      "verifiedOperationSequence": [
+        "launch Spotify",
+        "set search text to sweater weather",
+        "press Enter",
+        "open Sweater Weather result",
+        "play Sweater Weather by The Neighbourhood"
+      ],
+      "outcomeProbabilities": {
+        "requestedItem": 0.89,
+        "activePlayback": 0.92,
+        "requestedApplication": 0.97
+      },
+      "evidenceVerifier": "passed",
+      "visualQa": {
+        "source": "Controlling agent inspected rendered Spotify and Jev Desktop windows after the run.",
+        "requestedTrackAndArtistVisible": true,
+        "spotifyPauseControlVisible": true,
+        "spotifyProgressObserved": "0:11",
+        "applicationReportedFiveActionsComplete": true,
+        "requestEditableAndRunEnabled": true,
+        "stopDisabledAfterCompletion": true,
+        "longStatusEllipsizedWithoutResizingForm": true,
+        "audioOutputRecorded": false
+      }
+    },
+    {
+      "sourceResultFile": "fixture-result.json",
+      "sourceTraceFile": "run-20260920-125734-e26b7d.jsonl",
+      "sourceTraceSha256": "6D64BA7FCDA182288CDF528DBFD98D38761DD17076E3E2A0AFE03FE0BD0F706F",
+      "startedAt": "2026-09-20T12:57:34.0462457+05:30",
+      "completedAt": "2026-09-20T12:57:43.0034673+05:30",
+      "status": "completed",
+      "countedOperations": 4,
+      "configuredMaximum": 50,
+      "recordedInputAttempts": 4,
+      "operationTypes": [
+        "set_text",
+        "invoke",
+        "invoke",
+        "invoke"
+      ],
+      "observations": 6,
+      "decisions": 5,
+      "concreteModels": [
+        "jev-1.13.0"
+      ],
+      "verificationResults": [
+        {
+          "achieved": true,
+          "probability": 0.85
+        }
+      ],
+      "scope": "Real Jev API and native Windows fixture; playback is simulated.",
+      "independentFixtureEvidence": {
+        "track": "Sweater Weather - The Neighbourhood",
+        "expectedSequenceConfirmed": [
+          "search",
+          "select_track",
+          "play"
+        ],
+        "timerAdvanced": true,
+        "evidenceVerifier": "passed",
+        "sourceEventsSha256": "718C08E96D2B85BACCB7F4CD5527C9A6677C3087E8BA12B4F851C18E91D8D36B"
+      }
+    },
+    {
+      "sourceResultFile": "limit-result.json",
+      "sourceTraceFile": "run-20260920-130148-7dfb8c.jsonl",
+      "sourceTraceSha256": "BFE0B4808732637C1BEC67396FC2F2854C13EF2A015AC70F97BB5D7A636C9D0C",
+      "startedAt": "2026-09-20T13:01:48.8087887+05:30",
+      "completedAt": "2026-09-20T13:01:52.8097821+05:30",
+      "status": "limit_reached",
+      "countedOperations": 1,
+      "configuredMaximum": 1,
+      "recordedInputAttempts": 1,
+      "operationTypes": [
+        "set_text"
+      ],
+      "observations": 2,
+      "decisions": 1,
+      "concreteModels": [
+        "jev-1.13.0"
+      ],
+      "verificationResults": [
+        {
+          "achieved": false,
+          "probability": 0.04
+        }
+      ],
+      "scope": "Real Jev API and native fixture, configured maximum one operation.",
+      "evidenceVerifier": "passed"
+    },
+    {
+      "sourceResultFile": "spotify-result.json",
+      "sourceTraceFile": "run-20260920-125802-023f63.jsonl",
+      "sourceTraceSha256": "3CC71DF525AF135A6A2A2FAE88D3F985D9AD064FB9A1FE090ACD7D042649A75F",
+      "startedAt": "2026-09-20T12:58:02.8283086+05:30",
+      "completedAt": "2026-09-20T12:59:18.9647507+05:30",
+      "status": "error",
+      "countedOperations": 15,
+      "configuredMaximum": 50,
+      "recordedInputAttempts": 5,
+      "operationTypes": [
+        "expand",
+        "set_text",
+        "invoke",
+        "invoke",
+        "invoke"
+      ],
+      "observations": 25,
+      "decisions": 15,
+      "concreteModels": [
+        "jev-1.13.0"
+      ],
+      "verificationResults": [
+        {
+          "achieved": false,
+          "probability": 0.8
+        },
+        {
+          "achieved": false,
+          "probability": 0.81
+        },
+        {
+          "achieved": false,
+          "probability": 0.76
+        },
+        {
+          "achieved": false,
+          "probability": 0.78
+        },
+        {
+          "achieved": false,
+          "probability": 0.79
+        },
+        {
+          "achieved": false,
+          "probability": 0.78
+        },
+        {
+          "achieved": false,
+          "probability": 0.8
+        },
+        {
+          "achieved": false,
+          "probability": 0.82
+        },
+        {
+          "achieved": false,
+          "probability": 0.77
+        }
+      ],
+      "scope": "Earlier implementation; did not complete successfully.",
+      "initialSearchAndPlaybackInputCount": 4,
+      "terminalError": "Jev HTTP 400",
+      "completionRejections": 9
+    },
+    {
+      "sourceResultFile": "spotify-final-result.json",
+      "sourceTraceFile": "run-20260920-130542-501512.jsonl",
+      "sourceTraceSha256": "3D53F8ABE8CCB13C1B0E1A182C6DEFE998CD94EEDD1579D1CE526B0FEBE9725A",
+      "startedAt": "2026-09-20T13:05:43.0068896+05:30",
+      "completedAt": "2026-09-20T13:05:53.3419642+05:30",
+      "status": "completed",
+      "countedOperations": 1,
+      "configuredMaximum": 50,
+      "recordedInputAttempts": 1,
+      "operationTypes": [
+        "invoke"
+      ],
+      "observations": 3,
+      "decisions": 2,
+      "concreteModels": [
+        "jev-1.13.0"
+      ],
+      "verificationResults": [
+        {
+          "achieved": true,
+          "probability": 0.92
+        }
+      ],
+      "scope": "Corrected implementation; real installed Spotify app with another track playing and requested song already visible.",
+      "observedOutcome": {
+        "currentTrack": "Sweater Weather",
+        "artist": "The Neighbourhood",
+        "globalPauseControlObserved": true,
+        "progressBeforeVerification": "0:00",
+        "progressAtVerification": "0:03",
+        "titleMatchProbability": 0.92,
+        "activePlaybackProbability": 0.95,
+        "requestedAppProbability": 0.97,
+        "audioOutputRecorded": false
+      },
+      "evidenceVerifier": "passed"
+    }
+  ],
+  "guiAcceptance": {
+    "status": "passed",
+    "cancellationResults": [
+      {
+        "method": "F8",
+        "methodEvidence": "Controlling agent observed the rendered GUI and operated the stated stop mechanism.",
+        "sourceTraceFile": "run-20260920-131110-c10c33.jsonl",
+        "sourceTraceSha256": "AC381B050ADDD820087767028963B8372469A4F073F8C25424DC3D835499849E",
+        "startedAt": "2026-09-20T13:11:10.5287362+05:30",
+        "stoppedAt": "2026-09-20T13:11:15.2409226+05:30",
+        "status": "stopped",
+        "countedOperations": 1,
+        "terminalRecordIsLast": true,
+        "terminalResultCount": 1,
+        "formRestored": "Request editable; Run enabled; Stop disabled (visually checked)."
+      },
+      {
+        "method": "Stop button",
+        "methodEvidence": "Controlling agent observed the rendered GUI and operated the stated stop mechanism.",
+        "sourceTraceFile": "run-20260920-131125-8276cf.jsonl",
+        "sourceTraceSha256": "9D2A8CE71E1BA7E4B4AE11A64658C0D794E6076BE287CC22078F4CD85DC69A1D",
+        "startedAt": "2026-09-20T13:11:25.3748978+05:30",
+        "stoppedAt": "2026-09-20T13:11:28.6051988+05:30",
+        "status": "stopped",
+        "countedOperations": 1,
+        "terminalRecordIsLast": true,
+        "terminalResultCount": 1,
+        "formRestored": "Request editable; Run enabled; Stop disabled (visually checked)."
+      }
+    ],
+    "originalRequest": {
+      "sourceResultFile": "gui-original-result.json",
+      "sourceTraceFile": "run-20260920-131526-28f105.jsonl",
+      "sourceTraceSha256": "10C8FA00F303A553B64138FDDCF059FB66EBC22E8211708089772C82014DB82E",
+      "startedAt": "2026-09-20T13:15:26.5445997+05:30",
+      "completedAt": "2026-09-20T13:15:42.7566139+05:30",
+      "status": "completed",
+      "countedOperations": 2,
+      "configuredMaximum": 50,
+      "recordedInputAttempts": 2,
+      "operationTypes": [
+        "launch_app",
+        "invoke"
+      ],
+      "observations": 4,
+      "decisions": 3,
+      "concreteModels": [
+        "jev-1.13.0"
+      ],
+      "verificationResults": [
+        {
+          "achieved": true,
+          "probability": 0.92
+        }
+      ],
+      "scope": "Published GUI; original request entered, Automatic target, default maximum50. Requested song already visible in Spotify.",
+      "evidenceVerifier": "passed"
+    },
+    "finalFullSearch": {
+      "sourceResultFile": "gui-final-search-result.json",
+      "sourceTraceFile": "run-20260920-131948-089da4.jsonl",
+      "sourceTraceSha256": "D8ED6707E5E7BCC2845DEAD2F223D96DD9BC90011F535A7C6492F805B63F772D",
+      "startedAt": "2026-09-20T13:19:48.7271871+05:30",
+      "completedAt": "2026-09-20T13:20:15.3964848+05:30",
+      "status": "completed",
+      "countedOperations": 5,
+      "configuredMaximum": 50,
+      "recordedInputAttempts": 5,
+      "operationTypes": [
+        "launch_app",
+        "set_text",
+        "press_key",
+        "invoke",
+        "invoke"
+      ],
+      "observations": 6,
+      "decisions": 5,
+      "concreteModels": [
+        "jev-1.13.0"
+      ],
+      "verificationResults": [
+        {
+          "achieved": false,
+          "probability": 0.04
+        },
+        {
+          "achieved": false,
+          "probability": 0.09
+        },
+        {
+          "achieved": false,
+          "probability": 0.1
+        },
+        {
+          "achieved": false,
+          "probability": 0.09
+        },
+        {
+          "achieved": true,
+          "probability": 0.89
+        }
+      ],
+      "scope": "Final published GUI; original request with Automatic target and maximum50, starting from a different song/query and exercising actual search.",
+      "verifiedOperationSequence": [
+        "launch Spotify",
+        "set search text to sweater weather",
+        "press Enter",
+        "open Sweater Weather result",
+        "play Sweater Weather by The Neighbourhood"
+      ],
+      "outcomeProbabilities": {
+        "requestedItem": 0.89,
+        "activePlayback": 0.92,
+        "requestedApplication": 0.97
+      },
+      "evidenceVerifier": "passed",
+      "visualQa": {
+        "source": "Controlling agent inspected rendered Spotify and Jev Desktop windows after the run.",
+        "requestedTrackAndArtistVisible": true,
+        "spotifyPauseControlVisible": true,
+        "spotifyProgressObserved": "0:11",
+        "applicationReportedFiveActionsComplete": true,
+        "requestEditableAndRunEnabled": true,
+        "stopDisabledAfterCompletion": true,
+        "longStatusEllipsizedWithoutResizingForm": true,
+        "audioOutputRecorded": false
+      }
+    },
+    "note": "Final GUI completed the full original search-and-play request in five actions. F8 and Stop passed in the earlier cancellation build; those controls are unchanged. Long-status layout was visually checked on the final build."
+  }
+}

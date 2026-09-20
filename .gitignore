@@ -1,0 +1,48 @@
+# .NET build and publish output
+**/[Bb]in/
+**/[Oo]bj/
+/app/
+/artifacts/
+*.nupkg
+*.snupkg
+*.binlog
+
+# Visual Studio and local IDE state
+.vs/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.rsuser
+
+# Test output and runtime traces (may contain observed application data)
+TestResults/
+coverage/
+logs/
+*.log
+*.jsonl
+/windows.json
+/screen.json
+/result.json
+/*-result.json
+/verification.json
+
+# Local credentials and environment configuration
+.env
+.env.*
+!.env.example
+!.env.sample
+*.pfx
+*.p12
+*.key
+*.pubxml.user
+
+# OS files and editor backups
+Thumbs.db
+Desktop.ini
+.DS_Store
+*.tmp
+*.swp
+*.swo
+*~
