@@ -2,6 +2,14 @@
 
 JetDesk is a native Windows application for fast computer use, powered by Jev. It observes UI Automation controls, asks Jev to choose an operation, executes it, and observes the new state. There is no generative LLM or Codex dependency at runtime.
 
+## Demo
+
+[![Watch JetDesk and Codex play Sweater Weather on Spotify](docs/demo/poster.png)](docs/demo/jetdesk-vs-codex.mp4)
+
+**[Watch the 60-second demo](docs/demo/jetdesk-vs-codex.mp4)** — JetDesk completed this recorded task in **17.4 seconds**; Codex Computer Use took **42.7 seconds**, or **2.45× as long**. The video shows both runs side by side at real speed.
+
+One warmed run per workflow: JetDesk used **Jev 1.13.0**; Codex used **gpt-6-astra with ultra reasoning**. Both reached verified visible playback. JetDesk played the music video; Codex played the audio track. Setup, request entry, and the JetDesk GUI countdown are excluded. See the [methodology and limitations](docs/demo/METHODOLOGY.md).
+
 ## Run
 
 After cloning, install the .NET 8 SDK or newer and run `./Build.ps1` from this folder to create **app/JetDesk.exe**. Build output and local logs are excluded from Git.
