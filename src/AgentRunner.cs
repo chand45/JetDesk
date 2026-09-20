@@ -3,7 +3,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Text.Json;
 
-namespace JevDesktop;
+namespace JetDesk;
 
 /// <summary>One MTA thread owns every live UIA object and action.</summary>
 public sealed class AutomationWorker : IDisposable
@@ -13,7 +13,7 @@ public sealed class AutomationWorker : IDisposable
     public AutomationWorker()
     {
         thread = new Thread(() => { foreach (var action in queue.GetConsumingEnumerable()) action(); })
-        { IsBackground = true, Name = "Jev UI Automation" };
+        { IsBackground = true, Name = "JetDesk UI Automation" };
         thread.SetApartmentState(ApartmentState.MTA);
         thread.Start();
     }

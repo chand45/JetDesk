@@ -1,12 +1,12 @@
-# Jev Desktop
+# JetDesk
 
-A native Windows application that observes UI Automation controls, asks Jev to choose an operation, executes it, and observes the new state. There is no generative LLM or Codex dependency at runtime.
+JetDesk is a native Windows application for fast computer use, powered by Jev. It observes UI Automation controls, asks Jev to choose an operation, executes it, and observes the new state. There is no generative LLM or Codex dependency at runtime.
 
 ## Run
 
-After cloning, install the .NET 8 SDK or newer and run `./Build.ps1` from this folder to create **app/JevDesktop.exe**. Build output and local logs are excluded from Git.
+After cloning, install the .NET 8 SDK or newer and run `./Build.ps1` from this folder to create **app/JetDesk.exe**. Build output and local logs are excluded from Git.
 
-1. Open **app/JevDesktop.exe** (or double-click **Start Jev Desktop.cmd**).
+1. Open **app/JetDesk.exe** (or double-click **Start JetDesk.cmd**).
 2. Enter a request, for example **play sweater weather on spotify**.
 3. Leave **Start in** on Automatic, or select an existing application.
 4. Choose an operation limit (default **50**) and click **Run request**.
@@ -41,16 +41,16 @@ Dense observations use compact choice labels. If Jev specifically reports that i
 ## Command line
 
 ```powershell
-.\app\JevDesktop.exe --list-windows --result windows.json
-.\app\JevDesktop.exe --observe --window 123456 --result screen.json
-.\app\JevDesktop.exe --run "play sweater weather on spotify" --max-operations 50 --result result.json
+.\app\JetDesk.exe --list-windows --result windows.json
+.\app\JetDesk.exe --observe --window 123456 --result screen.json
+.\app\JetDesk.exe --run "play sweater weather on spotify" --max-operations 50 --result result.json
 ```
 
 Additional options: `--window HWND`, `--log-dir PATH`, and `--cancel-after-seconds N`. Use `Start-Process -Wait` or the returned process handle when scripting this Windows GUI executable; interactive shells can return before GUI processes finish. `--result` writes a terminal JSON result. Exit codes: 0 completed; 2 stopped or operation limit; 1 error or needs attention.
 
 ## Build and verification
 
-Run **Build.ps1** with the .NET 8 SDK or newer. Source is in **src**. No third-party NuGet dependencies are required.
+Run **Build.ps1** with the .NET 8 SDK or newer. The application project is **src/JetDesk.csproj**. No third-party NuGet dependencies are required.
 
 ```powershell
 dotnet run --project tests/client/ClientTests.csproj -c Release

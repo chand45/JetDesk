@@ -1,4 +1,4 @@
-namespace JevDesktop;
+namespace JetDesk;
 
 public sealed record ScreenRect(int X, int Y, int Width, int Height);
 public sealed record WindowInfo(string Id, string Title, string ProcessName, long Handle);

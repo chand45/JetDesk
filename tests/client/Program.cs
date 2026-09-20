@@ -1,4 +1,4 @@
-using JevDesktop;
+using JetDesk;
 using System.Net;
 using System.Diagnostics;
 using System.Net.Http.Headers;
@@ -338,9 +338,9 @@ var correctPlaying = await PlaybackCheck(playbackScreen, .97, .96, .99, "p2", st
 Assert(correctPlaying.Achieved && correctPlaying.Probability == .96, "playback completion requires all three checks and reports the weakest probability");
 
 var nativeFixtureScreen = snapshot with { Controls = [
-    playbackTrack with { Name = "Now playing: Sweater Weather - The Neighbourhood", Parent = "Window: Jev Test Music" },
-    playbackTrack with { Id = "p3", Name = "Playing: Sweater Weather - The Neighbourhood", Parent = "Window: Jev Test Music" },
-    playbackPause with { Name = "Pause playback", Parent = "Window: Jev Test Music" }
+    playbackTrack with { Name = "Now playing: Sweater Weather - The Neighbourhood", Parent = "Window: JetDesk Test Music" },
+    playbackTrack with { Id = "p3", Name = "Playing: Sweater Weather - The Neighbourhood", Parent = "Window: JetDesk Test Music" },
+    playbackPause with { Name = "Pause playback", Parent = "Window: JetDesk Test Music" }
 ] };
 Assert((await PlaybackCheck(nativeFixtureScreen, .99, .99, .99, "p2", state =>
 {

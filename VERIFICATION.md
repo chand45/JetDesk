@@ -1,6 +1,14 @@
-# Verification
+# JetDesk verification
+
+## JetDesk rename checks
+
+On 20 September 2026, `Build.ps1` published `app/JetDesk.exe`, the renamed native fixture built without warnings or errors, and the deterministic client and runner suites passed. Launching through `Start JetDesk.cmd` opened a native window whose title and heading were both **JetDesk**, with **Run request** enabled. The executable's product metadata and CLI usage also identify it as JetDesk. These checks cover the rename; the live API and Spotify scenarios below were not rerun for this branding change.
+
+## Historical functional verification
 
 Verified on Windows on 20 September 2026 using the installed .NET 8 Desktop Runtime and the real Jev API. This report separates native application behavior, classifier tests, and simulated test adapters. The published executable and assembly hashes are recorded in [evidence/verification-summary.json](evidence/verification-summary.json).
+
+These runs predate the rename from Jev Desktop to JetDesk. Their evidence, executable names, and hashes are preserved as historical records; they do not identify the rebuilt JetDesk executable. Jev remains the classifier provider used by JetDesk.
 
 **The final published GUI completed `play sweater weather on spotify` in five actions**, starting from a different song and search query. It opened Spotify, entered `sweater weather`, pressed Enter, opened the matching result, and pressed Play. It then verified the outcome and stopped. Spotify visibly showed Sweater Weather by The Neighbourhood, Pause, and progress at `0:11`; the Jev window reported completion and restored its controls.
 

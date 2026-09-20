@@ -3,7 +3,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Windows.Automation;
 
-namespace JevDesktop;
+namespace JetDesk;
 
 /// <summary>
 /// Local Windows UI Automation adapter. Calls must be serialized on an MTA worker.

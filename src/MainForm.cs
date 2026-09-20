@@ -2,7 +2,7 @@ using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
-namespace JevDesktop;
+namespace JetDesk;
 
 public sealed class MainForm : Form
 {
@@ -24,7 +24,7 @@ public sealed class MainForm : Form
 
     public MainForm()
     {
-        Text = "Jev Desktop";
+        Text = "JetDesk";
         ClientSize = new Size(900, 680);
         MinimumSize = new Size(740, 560);
         StartPosition = FormStartPosition.CenterScreen;
@@ -40,8 +40,8 @@ public sealed class MainForm : Form
         layout.RowStyles.Add(new RowStyle(SizeType.Absolute, 28));
         layout.RowStyles.Add(new RowStyle(SizeType.Percent, 100));
         layout.RowStyles.Add(new RowStyle(SizeType.Absolute, 35));
-        layout.Controls.Add(new Label { Text = "Jev Desktop", Font = new Font("Segoe UI", 23, FontStyle.Bold), AutoSize = true }, 0, 0);
-        layout.Controls.Add(new Label { Text = "Tell Jev what to do. It reads controls, chooses an action, and checks the next screen.", AutoSize = true }, 0, 1);
+        layout.Controls.Add(new Label { Text = "JetDesk", Font = new Font("Segoe UI", 23, FontStyle.Bold), AutoSize = true }, 0, 0);
+        layout.Controls.Add(new Label { Text = "Tell JetDesk what to do. It reads controls, chooses an action, and checks the next screen.", AutoSize = true }, 0, 1);
         layout.Controls.Add(request, 0, 2);
         var appsRow = new TableLayoutPanel { Dock = DockStyle.Fill, ColumnCount = 3 };
         appsRow.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 110));
@@ -84,7 +84,7 @@ public sealed class MainForm : Form
         {
             var previous = (target.SelectedItem as WindowChoice)?.Handle;
             var windows = await worker.InvokeAsync(automation.ListWindows);
-            target.Items.Clear(); target.Items.Add(new WindowChoice(null, "Automatic — Jev can choose an open app or launch one"));
+            target.Items.Clear(); target.Items.Add(new WindowChoice(null, "Automatic — JetDesk can choose an open app or launch one"));
             foreach (var window in windows) target.Items.Add(new WindowChoice(window.Handle, $"{window.ProcessName} — {window.Title}"));
             target.SelectedIndex = 0;
             if (previous is not null)

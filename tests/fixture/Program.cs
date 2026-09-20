@@ -1,7 +1,7 @@
 using System.Diagnostics;
 using System.Text.Json;
 
-namespace Jev.TestMusic;
+namespace JetDesk.TestMusic;
 
 internal static class Program
 {
@@ -45,8 +45,8 @@ internal sealed class MusicWindow : Form
         this.eventPath = Path.GetFullPath(eventPath);
         this.readyPath = readyPath is null ? null : Path.GetFullPath(readyPath);
         Directory.CreateDirectory(Path.GetDirectoryName(this.eventPath)!);
-        Text = "Jev Test Music";
-        Name = "JevTestMusic";
+        Text = "JetDesk Test Music";
+        Name = "JetDeskTestMusic";
         AccessibleName = Text;
         ClientSize = new Size(780, 570);
         MinimumSize = new Size(680, 580);
@@ -56,7 +56,7 @@ internal sealed class MusicWindow : Form
 
         var title = new Label
         {
-            Text = "Jev Test Music", Name = "title", AutoSize = true,
+            Text = "JetDesk Test Music", Name = "title", AutoSize = true,
             Location = new Point(26, 24), Font = new Font("Segoe UI", 20, FontStyle.Bold)
         };
         var explanation = new Label

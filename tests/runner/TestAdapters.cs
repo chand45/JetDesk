@@ -1,4 +1,4 @@
-namespace JevDesktop;
+namespace JetDesk;
 
 // Algorithm-only adapters. These deliberately do not link the production desktop or network code.
 // AgentRunner itself is compiled directly from production source by the test project.

@@ -1,6 +1,6 @@
-using JevDesktop;
+using JetDesk;
 
-var logDirectory = args.Length > 0 ? Path.GetFullPath(args[0]) : Path.Combine(Path.GetTempPath(), "JevDesktop-RunnerTests-" + Guid.NewGuid().ToString("N"));
+var logDirectory = args.Length > 0 ? Path.GetFullPath(args[0]) : Path.Combine(Path.GetTempPath(), "JetDesk-RunnerTests-" + Guid.NewGuid().ToString("N"));
 Directory.CreateDirectory(logDirectory);
 
 static void Assert(bool value, string name)

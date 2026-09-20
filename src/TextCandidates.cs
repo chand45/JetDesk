@@ -1,6 +1,6 @@
 using System.Text.RegularExpressions;
 
-namespace JevDesktop;
+namespace JetDesk;
 
 /// <summary>Constructs strings in ordinary code; Jev can select them but never invent text.</summary>
 public static class TextCandidates

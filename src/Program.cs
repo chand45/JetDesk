@@ -1,7 +1,7 @@
 using System.Text.Json;
 using System.Windows.Forms;
 
-namespace JevDesktop;
+namespace JetDesk;
 
 internal static class Program
 {
@@ -40,7 +40,7 @@ internal static class Program
         var goal = Option(args, "--run");
         if (goal is null)
         {
-            Output(new { usage = "JevDesktop.exe [--list-windows | --list-apps | --observe | --run \"request\"] [--window HWND] [--max-operations 50] [--result result.json] [--log-dir directory] [--cancel-after-seconds N]" });
+            Output(new { usage = "JetDesk.exe [--list-windows | --list-apps | --observe | --run \"request\"] [--window HWND] [--max-operations 50] [--result result.json] [--log-dir directory] [--cancel-after-seconds N]" });
             return 0;
         }
         using var client = new JevClient();

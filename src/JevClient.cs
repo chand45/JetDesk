@@ -6,7 +6,7 @@ using System.Text;
 using System.Text.Json;
 using System.Text.RegularExpressions;
 
-namespace JevDesktop;
+namespace JetDesk;
 
 /// <summary>Calls only Jev's typed classifier API; output text and commands are never generated.</summary>
 public sealed class JevClient : IDisposable

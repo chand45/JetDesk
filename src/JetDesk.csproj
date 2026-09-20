@@ -8,8 +8,11 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <ApplicationManifest>app.manifest</ApplicationManifest>
-    <AssemblyName>JevDesktop</AssemblyName>
-    <RootNamespace>JevDesktop</RootNamespace>
+    <AssemblyName>JetDesk</AssemblyName>
+    <RootNamespace>JetDesk</RootNamespace>
+    <Product>JetDesk</Product>
+    <Title>JetDesk</Title>
+    <Description>A native Windows desktop assistant powered by Jev.</Description>
     <Version>1.0.0</Version>
   </PropertyGroup>
 </Project>
