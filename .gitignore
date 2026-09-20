@@ -46,3 +46,6 @@ Desktop.ini
 *.swp
 *.swo
 *~
+
+# Codex outputs
+/outputs
